@@ -23,17 +23,41 @@
 └─ sharp-dry-shinagawa_renewal-plan.md   企画書
 ```
 
+## プレビュー
+
+https://shina937.github.io/sharp-dry-shinagawa/
+
+クライアント確認用のプレビュー。現行サイト https://sharp-dry-shinagawa.com/ が稼働中のため、
+重複コンテンツによる評価低下を避ける目的で**全ページに `noindex` を設定**し、
+`robots.txt` でクロールを拒否している。本番公開時はこの2点を外す（該当箇所に TODO コメントあり）。
+
 ## ローカルでの確認
 
-ルート相対パス（`/css/...`）で参照しているため、`file://` で直接開くと崩れる。
-リポジトリのルートで HTTP サーバーを起動して確認する。
+相対パス（`css/...` / `../css/...`）で参照しているため `file://` でも概ね表示できるが、
+実際の配信に合わせて HTTP サーバーで確認する。
 
 ```bash
 python3 -m http.server 8000
 # http://localhost:8000/
 ```
 
-`.htaccess` の301リダイレクトと404表示は Apache 上でのみ動作するため、この簡易サーバーでは確認できない。
+`.htaccess` の301リダイレクトと404表示は Apache 上でのみ動作するため、この簡易サーバーと
+GitHub Pages では確認できない。
+
+### パスの扱い
+
+GitHub Pages はリポジトリ名のサブディレクトリ（`/sharp-dry-shinagawa/`）配下に配信されるため、
+ルート相対パス（`/css/style.css`）は解決できない。そのため全ページを相対パスで記述している。
+相対パスはルート配信でもそのまま動くので、本番移行時の修正は不要。
+
+例外は `404.html` で、任意の階層で呼び出される都合上、相対パスが解決できない。
+GitHub Pages のサブパスを絶対指定している。
+
+```html
+<link rel="stylesheet" href="/sharp-dry-shinagawa/css/style.css">
+```
+
+**本番サーバーへ移行する際は、この `404.html` 内の `/sharp-dry-shinagawa` を削除する。**
 
 ## 画像の差し替え
 

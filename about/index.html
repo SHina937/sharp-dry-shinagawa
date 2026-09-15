@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: 公開前に削除 — プレビュー用の検索避け。本番公開時はこの1行と robots.txt の Disallow を外す -->
+  <meta name="robots" content="noindex, nofollow">
   <title>当店について｜シャープドライしながわ</title>
   <meta name="description" content="群馬県太田市で創業50余年。地元に愛されるクリーニング店の歴史と、店主の想いをご紹介します。">
   <link rel="canonical" href="https://sharp-dry-shinagawa.com/about/">
@@ -20,16 +22,16 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- ファビコン -->
-  <link rel="icon" type="image/png" href="/images/symbol_mark.png">
-  <link rel="apple-touch-icon" href="/images/symbol_mark.png">
+  <link rel="icon" type="image/png" href="../images/symbol_mark.png">
+  <link rel="apple-touch-icon" href="../images/symbol_mark.png">
 
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/main.js" defer></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
 
   <!-- GA4 -->
   <!-- TODO: 要確認 — GA4測定ID（発行後に G-XXXXXXXXXX を差し替え） -->
@@ -47,18 +49,18 @@
   <!-- ヘッダー -->
   <header class="header js-header">
     <div class="header__inner l-container">
-      <a class="header__logo" href="/">
+      <a class="header__logo" href="../">
         <span class="header__logo-ja">シャープドライしながわ</span>
         <span class="header__logo-en">Sharp Dry Shinagawa</span>
       </a>
       <div class="header__right">
         <nav class="gnav" id="global-nav" aria-label="グローバルナビゲーション">
           <ul class="gnav__list">
-            <li><a class="gnav__link" href="/service/">サービス・料金</a></li>
-            <li><a class="gnav__link" href="/special/">染み抜き・特殊</a></li>
-            <li><a class="gnav__link" href="/about/" aria-current="page">当店について</a></li>
-            <li><a class="gnav__link" href="/news/">お知らせ</a></li>
-            <li><a class="gnav__link gnav__link--business" href="/business/">法人・団体のお客様</a></li>
+            <li><a class="gnav__link" href="../service/">サービス・料金</a></li>
+            <li><a class="gnav__link" href="../special/">染み抜き・特殊</a></li>
+            <li><a class="gnav__link" href="../about/" aria-current="page">当店について</a></li>
+            <li><a class="gnav__link" href="../news/">お知らせ</a></li>
+            <li><a class="gnav__link gnav__link--business" href="../business/">法人・団体のお客様</a></li>
           </ul>
           <div class="gnav__cta">
             <a class="btn btn--primary" href="tel:0276227887">電話をかける（0276-22-7887）</a>
@@ -114,7 +116,7 @@
         </div>
         <div class="owner">
           <div class="owner__media">
-            <img src="/images/owner.png" alt="店主" width="1024" height="1024" loading="lazy">
+            <img src="../images/owner.png" alt="店主" width="1024" height="1024" loading="lazy">
           </div>
           <div class="owner__body">
             <!-- TODO: 要確認 — 店主のプロフィール・コメントの原稿（下記は仮テキスト） -->
@@ -150,7 +152,7 @@
           <p class="section-head__en">SHOP</p>
           <h2 class="section-head__ja">店舗のご案内</h2>
         </div>
-        <img src="/images/shop.png" alt="シャープドライしながわの店舗外観" width="1774" height="887" loading="lazy" class="shop-photo mb-3">
+        <img src="../images/shop.png" alt="シャープドライしながわの店舗外観" width="1774" height="887" loading="lazy" class="shop-photo mb-3">
 
         <div class="media-text media-text--reverse">
           <div class="media-text__media">
@@ -225,12 +227,12 @@
       </div>
       <nav class="footer__nav" aria-label="フッターナビゲーション">
         <ul>
-          <li><a href="/">ホーム</a></li>
-          <li><a href="/service/">サービス・料金</a></li>
-          <li><a href="/special/">染み抜き・特殊</a></li>
-          <li><a href="/business/">法人・団体のお客様</a></li>
-          <li><a href="/about/">当店について</a></li>
-          <li><a href="/news/">お知らせ</a></li>
+          <li><a href="../">ホーム</a></li>
+          <li><a href="../service/">サービス・料金</a></li>
+          <li><a href="../special/">染み抜き・特殊</a></li>
+          <li><a href="../business/">法人・団体のお客様</a></li>
+          <li><a href="../about/">当店について</a></li>
+          <li><a href="../news/">お知らせ</a></li>
         </ul>
       </nav>
     </div>

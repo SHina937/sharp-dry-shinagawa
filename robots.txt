@@ -1,4 +1,10 @@
-User-agent: *
-Allow: /
+# TODO: 公開前に変更 — 現在はクライアント確認用プレビューのため全ページを検索避けしている。
+# 本番公開時は Disallow を削除し、以下の Allow / Sitemap 行に戻す。
+#
+#   User-agent: *
+#   Allow: /
+#
+#   Sitemap: https://sharp-dry-shinagawa.com/sitemap.xml
 
-Sitemap: https://sharp-dry-shinagawa.com/sitemap.xml
+User-agent: *
+Disallow: /
