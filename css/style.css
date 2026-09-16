@@ -202,7 +202,7 @@ h4 { font-size: var(--fs-h4); line-height: 1.6; font-weight: 700; }
   }
 }
 
-.section--soft { background: var(--color-bg-soft); }
+
 .section--blue { background: var(--color-bg-blue); }
 
 .section--navy {
