@@ -1093,10 +1093,36 @@ h4 { font-size: var(--fs-h4); line-height: 1.6; font-weight: 700; }
   padding-block: var(--space-5);
 }
 
+/* 背景動画。重なり順は 動画(0) → オーバーレイ(1) → コピー(2) の順に固定する */
+.fv__video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  pointer-events: none;
+}
+
+@media (min-width: 769px) {
+  .fv__video {
+    object-position: center;
+  }
+}
+
+/* 動きを抑える設定のときは動画を出さず、CSSの背景画像を見せる */
+@media (prefers-reduced-motion: reduce) {
+  .fv__video {
+    display: none;
+  }
+}
+
 .fv::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: rgba(247, 246, 243, 0.78);
 }
 
@@ -1118,6 +1144,7 @@ h4 { font-size: var(--fs-h4); line-height: 1.6; font-weight: 700; }
 
 .fv__inner {
   position: relative;
+  z-index: 2;
   width: 100%;
 }
 

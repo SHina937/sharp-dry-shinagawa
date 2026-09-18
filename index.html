@@ -118,6 +118,11 @@
 
     <!-- FV -->
     <section class="fv" aria-label="メインビジュアル">
+      <!-- 装飾用の背景動画。再生できない環境では poster と CSS の背景画像にフォールバックする -->
+      <video class="fv__video" autoplay muted loop playsinline preload="auto"
+             poster="images/fv-a-folded-shirt.png" aria-hidden="true" tabindex="-1">
+        <source src="images/fv.webm" type="video/webm">
+      </video>
       <div class="fv__inner l-container">
         <div class="fv__copy">
           <p class="fv__area">群馬県太田市のクリーニング店</p>
