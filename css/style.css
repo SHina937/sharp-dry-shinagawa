@@ -1143,7 +1143,7 @@ h4 { font-size: var(--fs-h4); line-height: 1.6; font-weight: 700; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(247, 246, 243, 0.78);
+  background: rgba(247, 246, 243, 0.4);
 }
 
 @media (min-width: 769px) {
